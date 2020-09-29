@@ -29,5 +29,7 @@ Deploy process is quite straight forward
 
 ### Link to the endpoint URL for a running elastic beanstalk deployment
 http://pj-image-filter-dev.us-west-2.elasticbeanstalk.com/
+
 Example
+
 http://pj-image-filter-dev.us-west-2.elasticbeanstalk.com/filteredimage?image_url=https://i.pinimg.com/564x/02/fa/49/02fa49d2252223aaceefc775d5fd3778.jpg
