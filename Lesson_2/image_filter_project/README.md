@@ -19,30 +19,15 @@ You'll need to create a new node server. Open a new terminal within the project 
 
 ### Create a new endpoint in the server.ts file
 
-The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
-
-We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts`  file.
-
-```typescript
-import {filterImageFromURL, deleteLocalFiles} from './util/util';
-```
+```filteredimage``` endpoint is the new endpoint created to filter the given image. This endpoint takes an image url as "image_url" query parameter and proecsses the image if it is a valid url and returns to client (typically a browser).
 
 ### Deploying your system
 
-Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
+Deploy process is quite straight forward
+1. Use `eb init` to initialize a new application
+2. Use `eb create` to create a new environment to deploy the service.
 
-## Stand Out (Optional)
-
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-### Authentication
-
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+### Link to the endpoint URL for a running elastic beanstalk deployment
+http://pj-image-filter-dev.us-west-2.elasticbeanstalk.com/
+Example
+http://pj-image-filter-dev.us-west-2.elasticbeanstalk.com/filteredimage?image_url=https://i.pinimg.com/564x/02/fa/49/02fa49d2252223aaceefc775d5fd3778.jpg
